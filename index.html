@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -43,13 +44,13 @@
             </div>
 
             <audio id="wanderer-audio" preload="auto">
-                <source src="assets/audio/VO_Wanderer_Birthday.ogg" type="audio/ogg">
+                <source src="VO_Wanderer_Birthday.ogg" type="audio/ogg">
                 Seu navegador não consegue reproduzir este áudio.
             </audio>
 
             <audio
                 id="message-music"
-                src="assets/audio/mensagem-fundo.mp3"
+                src="mensagem-fundo.mp3"
                 preload="auto"
                 loop
             ></audio>
@@ -70,7 +71,7 @@
         <section class="scene art-scene" id="art-scene" hidden>
             <audio
                 id="art-music"
-                src="assets/audio/ilustracao.mp3"
+                src="ilustracao.mp3"
                 preload="auto"
                 loop
             ></audio>
@@ -79,7 +80,7 @@
                 <img
                     id="vinyl-disc"
                     class="vinyl-disc"
-                    src="assets/images/vinyl.png"
+                    src="vinyl.png"
                     alt=""
                     aria-hidden="true"
                 >
@@ -111,7 +112,6 @@
                 O que vale é a intenção, aproveita aí essa vista.
             </p>
 
-            <!-- GALERIA: ilustração principal + frente e verso da caneca -->
             <div class="gallery" id="art-gallery" aria-label="Galeria de presentes">
                 <div class="gallery-frame art-frame">
                     <div class="gallery-track" id="gallery-track">
@@ -121,7 +121,7 @@
                                 tabindex="0"
                                 role="button"
                                 aria-label="Ampliar imagem; pressione Enter para abrir"
-                                src="assets/images/wanderer-mei.jpg"
+                                src="wanderer-mei.jpg"
                                 alt="Wanderer e Mei sentados de costas um para o outro em uma floresta iluminada pelo sol."
                                 data-download-name="Para-Alex.jpg"
                             >
@@ -134,7 +134,7 @@
                                 tabindex="0"
                                 role="button"
                                 aria-label="Ampliar imagem; pressione Enter para abrir"
-                                src="assets/images/caneca-frente.png"
+                                src="caneca-frente.png"
                                 alt="Arte da frente da caneca preparada para Alex."
                                 data-download-name="Caneca-frente.png"
                             >
@@ -147,7 +147,7 @@
                                 tabindex="0"
                                 role="button"
                                 aria-label="Ampliar imagem; pressione Enter para abrir"
-                                src="assets/images/caneca-verso.png"
+                                src="caneca-verso.png"
                                 alt="Arte do verso da caneca preparada para Alex."
                                 data-download-name="Caneca-verso.png"
                             >
@@ -177,7 +177,7 @@
                 <a
                     class="secondary-button download-art-button"
                     id="download-art"
-                    href="assets/images/wanderer-mei.jpg"
+                    href="wanderer-mei.jpg"
                     download="Para-Alex.jpg"
                     type="application/octet-stream"
                 >
@@ -185,14 +185,13 @@
                 </a>
             </div>
 
-            <!-- ENVELOPE E CARTAS -->
             <section class="letter-area" aria-labelledby="letter-heading">
                 <div class="ending-ornament" aria-hidden="true">✧ ── ♡ ── ✧</div>
                 <h2 class="letter-heading" id="letter-heading">Um pequeno recado<span class="gold"> ♡</span></h2>
                 <p class="letter-hint">Tem algumas palavras esperando por você.</p>
 
                 <button class="envelope-button" id="open-letters" type="button" aria-label="Abrir envelope e ler as cartas">
-                    <img src="assets/images/envelope.png" alt="" class="envelope-image">
+                    <img src="envelope.png" alt="" class="envelope-image">
                     <span class="envelope-button-label">Ler cartas <span aria-hidden="true">✧</span></span>
                 </button>
             </section>
@@ -209,7 +208,6 @@
         <span>✧</span> uma pequena surpresa feita com carinho <span>✧</span>
     </footer>
 
-    <!-- SOBREPOSIÇÃO DAS CARTAS: permanece na mesma página e não pausa a música -->
     <div class="letter-overlay" id="letter-overlay" hidden>
         <div class="letter-backdrop" id="letter-backdrop"></div>
 
@@ -245,7 +243,6 @@
         </section>
     </div>
 
-    <!-- VISUALIZADOR DA IMAGEM AMPLIADA -->
     <div class="image-viewer" id="image-viewer" hidden>
         <div class="image-viewer-backdrop" id="image-viewer-backdrop"></div>
         <section class="image-viewer-panel" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
