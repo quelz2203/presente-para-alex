@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111126">
+    <title>Uma surpresa para Alex ♡</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="background-glow" aria-hidden="true"></div>
+    <div class="stars" aria-hidden="true">✦　·　✧　　　·　✦　　✧</div>
+
+    <main>
+        <section class="scene welcome-screen" id="welcome">
+            <div class="eyebrow">
+                <span>✧</span> UMA PEQUENA SURPRESA <span>✧</span>
+            </div>
+
+            <div class="ornament" aria-hidden="true">❋</div>
+
+            <h1>Ei! Oi, Alex<span class="gold"> ♡</span></h1>
+
+            <p class="intro-copy" id="intro-text" aria-live="polite"></p>
+
+            <button class="primary-button" id="continue-button" disabled>
+                Continuar <span>✧</span>
+            </button>
+
+            <p class="small-note">Feito especialmente para você.</p>
+        </section>
+
+        <section class="scene voice-scene" id="voice-scene" hidden>
+            <div class="message-track" aria-label="Música: Õrora (オーロラ) (Instrumental)">
+                <span class="track-star" aria-hidden="true">✧</span>
+                <span class="track-name">Õrora (オーロラ) (Instrumental)</span>
+            </div>
+
+            <audio id="wanderer-audio" preload="auto">
+                <source src="assets/audio/VO_Wanderer_Birthday.ogg" type="audio/ogg">
+                Seu navegador não consegue reproduzir este áudio.
+            </audio>
+
+            <audio
+                id="message-music"
+                src="assets/audio/mensagem-fundo.mp3"
+                preload="auto"
+                loop
+            ></audio>
+
+            <div class="cinematic-subtitle" aria-live="off">
+                <p id="subtitle"></p>
+            </div>
+
+            <button class="audio-retry" id="audio-retry" hidden>
+                Tocar mensagem
+            </button>
+
+            <button class="cinematic-skip" id="reveal-button" hidden>
+                Continuar <span>✧</span>
+            </button>
+        </section>
+
+        <section class="scene art-scene" id="art-scene" hidden>
+            <audio
+                id="art-music"
+                src="assets/audio/ilustracao.mp3"
+                preload="auto"
+                loop
+            ></audio>
+
+            <div class="art-music-player">
+                <img
+                    id="vinyl-disc"
+                    class="vinyl-disc"
+                    src="assets/images/vinyl.png"
+                    alt=""
+                    aria-hidden="true"
+                >
+
+                <div class="art-music-info">
+                    <span class="art-music-label">TOCANDO AGORA</span>
+                    <span class="art-music-title" id="music-title">Lover Girl</span>
+                    <span class="art-music-artist" id="music-artist">Laufey</span>
+                </div>
+
+                <button
+                    class="art-music-toggle"
+                    id="music-toggle"
+                    type="button"
+                    aria-label="Pausar música"
+                    title="Tocar ou pausar música"
+                >
+                    <span id="music-toggle-icon" aria-hidden="true">Ⅱ</span>
+                </button>
+            </div>
+
+            <div class="eyebrow">
+                <span>✧</span> FEITO COM CARINHO <span>✧</span>
+            </div>
+
+            <h2>Uma lembrancinha, eu tentei<span class="gold"> ♡</span></h2>
+
+            <p class="art-description">
+                O que vale é a intenção, aproveita aí essa vista.
+            </p>
+
+            <!-- GALERIA: ilustração principal + frente e verso da caneca -->
+            <div class="gallery" id="art-gallery" aria-label="Galeria de presentes">
+                <div class="gallery-frame art-frame">
+                    <div class="gallery-track" id="gallery-track">
+                        <figure class="gallery-slide is-active" data-index="0">
+                            <img
+                                class="gallery-image"
+                                tabindex="0"
+                                role="button"
+                                aria-label="Ampliar imagem; pressione Enter para abrir"
+                                src="assets/images/wanderer-mei.jpg"
+                                alt="Wanderer e Mei sentados de costas um para o outro em uma floresta iluminada pelo sol."
+                                data-download-name="Para-Alex.jpg"
+                            >
+                            <figcaption>FY ♡</figcaption>
+                        </figure>
+
+                        <figure class="gallery-slide" data-index="1" aria-hidden="true">
+                            <img
+                                class="gallery-image"
+                                tabindex="0"
+                                role="button"
+                                aria-label="Ampliar imagem; pressione Enter para abrir"
+                                src="assets/images/caneca-frente.png"
+                                alt="Arte da frente da caneca preparada para Alex."
+                                data-download-name="Caneca-frente.png"
+                            >
+                            <figcaption>Uma lembrança para guardar. ♡</figcaption>
+                        </figure>
+
+                        <figure class="gallery-slide" data-index="2" aria-hidden="true">
+                            <img
+                                class="gallery-image"
+                                tabindex="0"
+                                role="button"
+                                aria-label="Ampliar imagem; pressione Enter para abrir"
+                                src="assets/images/caneca-verso.png"
+                                alt="Arte do verso da caneca preparada para Alex."
+                                data-download-name="Caneca-verso.png"
+                            >
+                            <figcaption>Um detalhe feito com carinho. ♡</figcaption>
+                        </figure>
+                    </div>
+
+                    <button class="gallery-arrow gallery-prev" id="gallery-prev" type="button" aria-label="Imagem anterior">
+                        ‹
+                    </button>
+                    <button class="gallery-arrow gallery-next" id="gallery-next" type="button" aria-label="Próxima imagem">
+                        ›
+                    </button>
+                </div>
+
+                <div class="gallery-bottom">
+                    <div class="gallery-dots" id="gallery-dots" aria-label="Selecionar imagem">
+                        <button class="gallery-dot is-active" type="button" aria-label="Ver ilustração principal" aria-pressed="true" data-index="0"></button>
+                        <button class="gallery-dot" type="button" aria-label="Ver frente da caneca" aria-pressed="false" data-index="1"></button>
+                        <button class="gallery-dot" type="button" aria-label="Ver verso da caneca" aria-pressed="false" data-index="2"></button>
+                    </div>
+                    <p class="gallery-counter" id="gallery-counter" aria-live="polite">1 / 3</p>
+                </div>
+            </div>
+
+            <div class="art-action-buttons">
+                <a
+                    class="secondary-button download-art-button"
+                    id="download-art"
+                    href="assets/images/wanderer-mei.jpg"
+                    download="Para-Alex.jpg"
+                    type="application/octet-stream"
+                >
+                    Baixar imagem ↓
+                </a>
+            </div>
+
+            <!-- ENVELOPE E CARTAS -->
+            <section class="letter-area" aria-labelledby="letter-heading">
+                <div class="ending-ornament" aria-hidden="true">✧ ── ♡ ── ✧</div>
+                <h2 class="letter-heading" id="letter-heading">Um pequeno recado<span class="gold"> ♡</span></h2>
+                <p class="letter-hint">Tem algumas palavras esperando por você.</p>
+
+                <button class="envelope-button" id="open-letters" type="button" aria-label="Abrir envelope e ler as cartas">
+                    <img src="assets/images/envelope.png" alt="" class="envelope-image">
+                    <span class="envelope-button-label">Ler cartas <span aria-hidden="true">✧</span></span>
+                </button>
+            </section>
+
+            <div class="art-action-buttons final-actions">
+                <button class="secondary-button" id="restart-button" type="button">
+                    Reviver momento
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span>✧</span> uma pequena surpresa feita com carinho <span>✧</span>
+    </footer>
+
+    <!-- SOBREPOSIÇÃO DAS CARTAS: permanece na mesma página e não pausa a música -->
+    <div class="letter-overlay" id="letter-overlay" hidden>
+        <div class="letter-backdrop" id="letter-backdrop"></div>
+
+        <section
+            class="letter-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="letter-modal-title"
+            aria-describedby="letter-content"
+        >
+            <button class="letter-close" id="close-letters" type="button" aria-label="Fechar carta">×</button>
+
+            <div class="eyebrow letter-eyebrow">
+                <span>✧</span> UMA CARTINHA PARA VOCÊ <span>✧</span>
+            </div>
+
+            <h2 id="letter-modal-title">Uma cartinha<span class="gold"> ♡</span></h2>
+
+            <div class="letter-tabs" role="group" aria-label="Escolher carta">
+                <button class="letter-tab is-active" type="button" data-letter="0" aria-pressed="true">Carta 1</button>
+                <button class="letter-tab" type="button" data-letter="1" aria-pressed="false">Carta 2</button>
+            </div>
+
+            <article class="letter-paper" id="letter-content" tabindex="0">
+                <p class="letter-text" id="letter-text"></p>
+            </article>
+
+            <div class="letter-footer">
+                <span aria-hidden="true">✧</span>
+                <button class="secondary-button" id="next-letter" type="button">Ler a próxima carta →</button>
+                <span aria-hidden="true">✧</span>
+            </div>
+        </section>
+    </div>
+
+    <!-- VISUALIZADOR DA IMAGEM AMPLIADA -->
+    <div class="image-viewer" id="image-viewer" hidden>
+        <div class="image-viewer-backdrop" id="image-viewer-backdrop"></div>
+        <section class="image-viewer-panel" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+            <button class="image-viewer-back" id="image-viewer-back" type="button">← Voltar à ilustração</button>
+            <img class="image-viewer-image" id="image-viewer-image" src="" alt="">
+            <p class="image-viewer-caption" id="image-viewer-caption"></p>
+        </section>
+    </div>
+
+</body>
+</html>
